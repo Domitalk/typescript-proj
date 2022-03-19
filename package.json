@@ -1,0 +1,23 @@
+{
+  "name": "typescript-proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Domitalk/typescript-proj.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Domitalk/typescript-proj/issues"
+  },
+  "homepage": "https://github.com/Domitalk/typescript-proj#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "ts-node": "^10.7.0"
+  }
+}
