@@ -103,3 +103,68 @@ for (let i = 0; i < numbers.length; i++) {
         numberAboveZero = numbers[i]
     }
 }
+
+
+// better ways to annotate functions 
+// prev example was for the variable that's defined function 
+// this time, how to annotate a function itself 
+
+// ts will try to figure out the return type of a function as inference 
+// but it won't try to figure out the input because there's no logical way to do that 
+
+const add = (a: number, b: number): number => {
+    return a + b
+}
+
+// ts can infer the return type but it's better to annotate it so we have the safeguards 
+// literally the reason we use ts 
+// do it 
+const subtract = (a: number, b: number): number => {
+    return a - b
+}
+
+function divide(a: number, b: number): number {
+    return a / b
+}
+
+const multiply = function (a: number, b: number): number {
+    return a * b
+}
+
+const logger = (message: string): void => {
+    console.log(message) 
+    // return null or return undefined 
+    // basically void means no return VALUE 
+}
+
+// this cool, never gonna reach the end of the function because it'll exit on new Error 
+// this is rare 
+const throwError = (message: string): never => {
+    throw new Error(message)
+}
+
+const forecast = {
+    date: new Date(), 
+    weather: 'sunny'
+}
+
+const logWeather = (forecast: {date: Date, weather: string}): void => {
+    console.log(forecast.date)
+    console.log(forecast.weather)
+}
+
+logWeather(forecast)
+
+
+//ES2015
+const logTheWeather = ({date, weather}) => {
+    console.log(date) 
+    console.log(weather)
+}
+
+// {date, weather} is destructuring {date: Date, weather: string} is the anotation
+const logTheWeatherTwo = ({date, weather}: {date: Date, weather: string}): void => {
+    console.log(date) 
+    console.log(weather)
+}
+
