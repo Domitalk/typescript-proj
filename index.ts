@@ -46,11 +46,17 @@ let truths: boolean[] = [true, true, true, false]
 class Car {
 
 }
-let car: Car = new Car
+let car: Car = new Car()
 
 // Object literal 
 // seperate with ; 
 let point: { x: number; y: number; } = {
     x: 10, 
     y: 20
+}
+
+// function 
+// nasty 
+const logNumber: (i: number) => void = (i) => {
+    console.log(i)
 }
