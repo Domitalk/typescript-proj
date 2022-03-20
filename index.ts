@@ -168,3 +168,26 @@ const logTheWeatherTwo = ({date, weather}: {date: Date, weather: string}): void 
     console.log(weather)
 }
 
+
+
+// Doing Objects 
+const profile = {
+    name: 'alex', 
+    age: 20, 
+    coords: {
+        lat: 0, 
+        lng: 15
+    }, 
+    setAge(age: number): void {
+        this.age = age
+    }
+}
+
+// exercise in destructuring 
+// the annotation came after the normal destructuring 
+const { age }: { age: number } = profile 
+
+
+// lat long 
+// const { coords: { lat, lng } } = profile
+const { coords: { lat, lng } }: { coords: { lat: number; lng: number } } = profile
